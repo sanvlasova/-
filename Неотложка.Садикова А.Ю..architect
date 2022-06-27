@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.9">
+ <project-name>Неотложка</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="PlayPen Database" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" UUID="b54e84df-954c-48a3-ae92-21b10c96d2c2" name="Вызовы" objectType="TABLE" physicalName="Calls" >
+   <remarks>таблица вызовов</remarks>
+   <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL2" populated="true" UUID="18c8ca6d-a5c6-4920-ab20-de0abf1a4983" autoIncrement="false" autoIncrementSequenceName="Calls_ID_Call_seq" defaultValue="" name="ID Вызова" nullable="0" physicalName="ID_Call" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>первичный ключ; идентификатор вызова</remarks>
+    </column>
+    <column id="COL3" populated="true" UUID="d263d2b3-d680-4756-8bba-b3e3d6bb929c" autoIncrement="false" autoIncrementSequenceName="Calls_Date_Call_seq" defaultValue="" name="Дата вызова" nullable="0" physicalName="Date_call" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>дата вызова</remarks>
+    </column>
+    <column id="COL4" populated="true" UUID="2a0009ad-31ba-4774-a8a5-616f8e63d5e1" autoIncrement="false" autoIncrementSequenceName="Calls_Time_Call_seq" defaultValue="" name="Время вызова" nullable="0" physicalName="Time_Call" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="92" userDefinedTypeUUID="10d6960f-169d-47c2-860a-37341342b1d5" >
+     <remarks>время вызова</remarks>
+    </column>
+    <column id="COL5" populated="true" UUID="b29b3847-3609-4027-a24b-2b7089320dce" autoIncrement="false" autoIncrementSequenceName="Calls_Reason_Call_seq" defaultValue="" name="Причина вызова" nullable="0" physicalName="Reason_Call" precision="1024" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>причина вызова</remarks>
+    </column>
+    <column id="COL6" populated="true" UUID="35da4e38-0fca-4b53-a910-95f50d3f2b87" autoIncrement="false" autoIncrementSequenceName="Patients_ID_Patient_seq" defaultValue="" name="ID Пациента" nullable="0" physicalName="ID_Patient" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX7" populated="true" UUID="15f4e125-795b-48af-b9f2-37e4dded313a" clustered="false" name="Call_pk" physicalName="call_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC8" populated="true" UUID="5bbf5d04-d5f8-45a2-904f-7a2f60e93993" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="ID Вызова" physicalName="ID_Call" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB9" populated="true" UUID="34064ab6-2cd7-4bb7-857c-25ef3671ad54" name="Бригады" objectType="TABLE" physicalName="Brigades" >
+   <remarks>таблица Бригады</remarks>
+   <folder id="FOLTAB91" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL10" populated="true" UUID="80ba1fa2-db55-47bc-b013-c31431ea37c1" autoIncrement="false" autoIncrementSequenceName="Brigades_ID_Brigade_seq" defaultValue="" name="ID Бригады" nullable="0" physicalName="ID_Brigade" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>идентикатор бригады</remarks>
+    </column>
+    <column id="COL11" populated="true" UUID="33d0df51-139b-4602-9775-b955fdebbbd5" autoIncrement="false" autoIncrementSequenceName="Brigades_Name_seq" defaultValue="" name="Наименование (номер) бригады" nullable="0" physicalName="Name" precision="64" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>наименование (номер) бригады</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB93" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB92" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB94" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX12" populated="true" UUID="75b72763-cc9e-4ccc-9ed0-d856ff43bd85" clustered="false" name="Brigade_pk" physicalName="brigade_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC13" populated="true" UUID="428ddc13-cda9-476c-bf89-79ecff98531f" ascendingOrDescending="UNSPECIFIED" column-ref="COL10" name="ID Бригады" physicalName="ID_Brigade" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB14" populated="true" UUID="09361e38-3943-44f3-9bce-abd26d3905e2" name="Черный список" objectType="TABLE" physicalName="Black_List" >
+   <remarks>черный список</remarks>
+   <folder id="FOLTAB141" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL15" populated="true" UUID="10148b9b-efcc-4a0b-b4ca-e2eb591bba58" autoIncrement="false" autoIncrementSequenceName="Patients_ID_Patient_seq" defaultValue="" name="ID Пациента" nullable="0" physicalName="ID_Patient" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL16" populated="true" UUID="c8cb6ce6-3407-42ce-bf07-03dd21daa77b" autoIncrement="false" autoIncrementSequenceName="Black_List_Reason_seq" defaultValue="" name="Причина" nullable="0" physicalName="Reason" precision="1024" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>причина добавления в черный список</remarks>
+    </column>
+    <column id="COL17" populated="true" UUID="0ac2de5b-2a9d-44f2-9207-7d75e642996b" autoIncrement="false" autoIncrementSequenceName="Black_List_Recommendations_seq" defaultValue="" name="Рекомендации" nullable="0" physicalName="Recommendations" precision="1024" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>рекомендации</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB143" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB142" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB144" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX18" populated="true" UUID="77714dd2-da03-470f-b172-22b144b938f9" clustered="false" name="Black_List_pk" physicalName="black_list_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC19" populated="true" UUID="f9bee3e8-a7ec-4370-bd5a-f50c5a3210d0" ascendingOrDescending="UNSPECIFIED" column-ref="COL15" name="ID Пациента" physicalName="ID_Patient" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB20" populated="true" UUID="bc7b20e1-db87-4255-bd1f-495392242773" name="Данные вызова" objectType="TABLE" physicalName="Call_Data" >
+   <remarks>Данные вызова</remarks>
+   <folder id="FOLTAB201" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL21" populated="true" UUID="fd6498cd-306b-4b6f-9a71-357003971ad4" autoIncrement="false" autoIncrementSequenceName="Call_Data_ID_Call_seq" defaultValue="" name="ID Вызова" nullable="0" physicalName="ID_Call" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>первичный ключ; идентификатор вызова</remarks>
+    </column>
+    <column id="COL22" populated="true" UUID="7faedb54-8675-4939-aa5f-541b4838374c" autoIncrement="false" autoIncrementSequenceName="Call_Data_Departure_Date_seq" defaultValue="" name="Дата отправления бригады" nullable="1" physicalName="Departure_Date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>дата отправления бригады</remarks>
+    </column>
+    <column id="COL23" populated="true" UUID="d1ea7627-97b5-4e3e-8332-7b48729fe1d9" autoIncrement="false" autoIncrementSequenceName="Call_Data_Departure_Time_seq" defaultValue="" name="Время отправления бригады" nullable="1" physicalName="Departure_Time" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="92" userDefinedTypeUUID="10d6960f-169d-47c2-860a-37341342b1d5" >
+     <remarks>время отправления бригады ((Данная строка не может быть заполнена одними нулями. Если отмечаемый момент времени для этой или других позиций, отражающих время, соответствует полуночи, то он обозначается как «24 00».)</remarks>
+    </column>
+    <column id="COL24" populated="true" UUID="cff8d358-9eb7-4fc4-b71c-d9c7394cd44f" autoIncrement="false" autoIncrementSequenceName="Call_Data_Arrival_Date_seq" defaultValue="" name="Дата прибытия" nullable="1" physicalName="Arrival_Date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>дата прибытия</remarks>
+    </column>
+    <column id="COL25" populated="true" UUID="5c426c6b-325b-4dfc-b8bc-f93179050ded" autoIncrement="false" autoIncrementSequenceName="Call_Data_Arrival_Time_seq" defaultValue="" name="Время прибытия" nullable="1" physicalName="Arrival_Time" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="92" userDefinedTypeUUID="10d6960f-169d-47c2-860a-37341342b1d5" >
+     <remarks>Время прибытия ( Данная строка может быть заполнена одними нулями при следующих результатах вызова: «адрес не найден», «вызов отменен», «вызов не выполнен по технической причине»;)</remarks>
+    </column>
+    <column id="COL26" populated="true" UUID="2ea6e08b-076a-4dba-b9d1-1c43755a740f" autoIncrement="false" autoIncrementSequenceName="Call_Data_End_Date_seq" defaultValue="" name="Дата окончания" nullable="1" physicalName="End_Date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>Дата окончания</remarks>
+    </column>
+    <column id="COL27" populated="true" UUID="12f5a1fa-7766-4435-880b-1c49b3ab7bed" autoIncrement="false" autoIncrementSequenceName="Call_Data_End_Time_seq" defaultValue="" name="Время окончания" nullable="1" physicalName="End_Time" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="92" userDefinedTypeUUID="10d6960f-169d-47c2-860a-37341342b1d5" >
+     <remarks>время окончания</remarks>
+    </column>
+    <column id="COL28" populated="true" UUID="67f67e8c-5915-44c6-bc95-f2acce368288" autoIncrement="false" autoIncrementSequenceName="Call_Data_Return_Date_seq" defaultValue="" name="Дата возврата" nullable="1" physicalName="Return_Date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>дата возврата</remarks>
+    </column>
+    <column id="COL29" populated="true" UUID="e12e429c-6711-4c94-ac3a-3cdbd3c0c945" autoIncrement="false" autoIncrementSequenceName="Call_Data_Return_Time_seq" defaultValue="" name="Время возврата" nullable="1" physicalName="Return_Time" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="92" userDefinedTypeUUID="10d6960f-169d-47c2-860a-37341342b1d5" >
+     <remarks>время возврата</remarks>
+    </column>
+    <column id="COL30" populated="true" UUID="69aab6f6-ae53-49a7-9ba9-eebf4bfbf1ef" autoIncrement="false" autoIncrementSequenceName="Call_Data_Informal_Description_seq" defaultValue="" name="Неформальное описание случая" nullable="1" physicalName="Informal_Description" precision="1024" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>неформальное описание случая</remarks>
+    </column>
+    <column id="COL31" populated="true" UUID="f0c6d893-095b-471e-96aa-f6ef0d602501" autoIncrement="false" autoIncrementSequenceName="Call_Data_Information_Hospitalization_seq" defaultValue="" name="Информация о госпитализации" nullable="1" physicalName="Information_Hospitalization" precision="1024" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>информация о госпитализации</remarks>
+    </column>
+    <column id="COL32" populated="true" UUID="68c458ba-4e98-4304-aaa9-1e29aff56995" autoIncrement="false" autoIncrementSequenceName="Call_Data_ID_Diagnosis_seq" defaultValue="" name="ID Диагноза" nullable="1" physicalName="ID Диагноза" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>идентифкатор диагноза</remarks>
+    </column>
+    <column id="COL33" populated="true" UUID="539839b4-ef60-4958-a414-0a5aec557da6" autoIncrement="false" autoIncrementSequenceName="Call_Data_Transportation_Distance_seq" defaultValue="" name="Расстояние транспортировки" nullable="1" physicalName="Transportation_Distance" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>расстояние транспортировки</remarks>
+    </column>
+    <column id="COL34" populated="true" UUID="28eec378-9f34-4def-aa76-128798bf1925" autoIncrement="false" autoIncrementSequenceName="Call_Data_Outcome_Call_seq" defaultValue="" name="Исход вызова" nullable="1" physicalName="Outcome_Call" precision="1024" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>исход вызова</remarks>
+    </column>
+    <column id="COL35" populated="true" UUID="19ff9409-478b-498f-8d0b-213d6bd2a940" autoIncrement="false" autoIncrementSequenceName="Call_Data_ID_Rate_seq" defaultValue="" name="ID Тарифа" nullable="1" physicalName="ID Тарифа" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL36" populated="true" UUID="05dec57e-e001-4a5a-86ad-817d6d0087d0" autoIncrement="false" autoIncrementSequenceName="Call_Data_ID_Brigade_seq" defaultValue="" name="ID Бригады" nullable="1" physicalName="ID Бригады" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>идентикатор бригады</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB203" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB202" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB204" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX37" populated="true" UUID="fd8ad83d-4d50-4595-be18-b87f0716b7c6" clustered="false" name="Call_Data_pk" physicalName="call_data_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC38" populated="true" UUID="bb0d7e0b-1c36-4e43-bcbf-5014f843a492" ascendingOrDescending="UNSPECIFIED" column-ref="COL21" name="ID Вызова" physicalName="ID_Call" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB39" populated="true" UUID="4060a216-5907-4a33-8f98-b189f7cf6af2" name="Анализы" objectType="TABLE" physicalName="Analyzes" >
+   <remarks>таблица анализов</remarks>
+   <folder id="FOLTAB391" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL40" populated="true" UUID="c2313e36-c8e0-42e9-90f4-c132a1ef8d7c" autoIncrement="false" autoIncrementSequenceName="Analyzes_ID_Analyzes_seq" defaultValue="" name="ID Анализа" nullable="0" physicalName="ID_Analyzes" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL41" populated="true" UUID="2c2ece65-780a-4130-adf9-3bbeb3f49ccf" autoIncrement="false" autoIncrementSequenceName="Analyzes_Name_seq" defaultValue="" name="Наименование" nullable="0" physicalName="Name" precision="1024" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>наименование анализа</remarks>
+    </column>
+    <column id="COL42" populated="true" UUID="51cfbd0a-8abb-4a75-83f0-5692ec6609e5" autoIncrement="false" autoIncrementSequenceName="Analyzes_Price_Analyses_seq" defaultValue="" name="Стоимость" nullable="0" physicalName="Price_Analyses" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Стоимость анализа</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB393" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB392" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB394" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX43" populated="true" UUID="fc237758-6d91-4d80-b1a2-4e7a62ff33dd" clustered="false" name="analysis_pk" physicalName="analyses_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC44" populated="true" UUID="e286a6e2-0ddb-461d-b4e4-bc1c21020286" ascendingOrDescending="UNSPECIFIED" column-ref="COL40" name="ID Анализа" physicalName="ID_Analyzes" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB45" populated="true" UUID="00a82781-58da-4f5c-8b7f-b29595c002e0" name="Медикаменты" objectType="TABLE" physicalName="Medications" >
+   <remarks>Таблица медикаментов</remarks>
+   <folder id="FOLTAB451" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL46" populated="true" UUID="6698adbc-f4e4-41c0-aef7-6f389d3e3514" autoIncrement="false" autoIncrementSequenceName="Medications_ID_Medications_seq" defaultValue="" name="ID_ Медикамента" nullable="0" physicalName="ID_Medications" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL47" populated="true" UUID="52215540-ea99-4a50-bf24-be8e0956bc7f" autoIncrement="false" autoIncrementSequenceName="Medications_Name_seq" defaultValue="" name="Наименование" nullable="0" physicalName="Name" precision="64" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>наименование лекарства</remarks>
+    </column>
+    <column id="COL48" populated="true" UUID="c63062b7-c9e9-4634-9d2b-c2996cce4c47" autoIncrement="false" autoIncrementSequenceName="Medications_Price_Medication_seq" defaultValue="" name="Стоимость" nullable="0" physicalName="Price_Medication" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>стоимость медимкамента</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB453" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB452" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB454" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX49" populated="true" UUID="4fa9f4df-4eea-4caa-a086-439702bf4f19" clustered="false" name="Medication_pk" physicalName="medication_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC50" populated="true" UUID="1ae1b407-49d9-48ef-ab0a-7b027f979c6b" ascendingOrDescending="UNSPECIFIED" column-ref="COL46" name="ID_ Медикамента" physicalName="ID_Medications" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB51" populated="true" UUID="8101ae40-f95d-4217-8363-41d19c22da04" name="Тарифы" objectType="TABLE" physicalName="Rates" >
+   <remarks>таблица тарифов</remarks>
+   <folder id="FOLTAB511" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL52" populated="true" UUID="08c2bd6a-5767-4495-ace1-25be2978402e" autoIncrement="false" autoIncrementSequenceName="Rates_ID_Rate_seq" defaultValue="" name="ID Тарифа" nullable="0" physicalName="ID_Rate" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL53" populated="true" UUID="c1f6a3bf-fda2-466b-8415-3bbef263aa45" autoIncrement="false" autoIncrementSequenceName="Rates_Name_seq" defaultValue="" name="Наименование" nullable="0" physicalName="Name" precision="64" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB513" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB512" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB514" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX54" populated="true" UUID="72badaa3-d6c3-442b-a044-0102e22081d4" clustered="false" name="Rate_pk" physicalName="rate_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC55" populated="true" UUID="598fc411-d5f1-46e6-b23e-5978751f2beb" ascendingOrDescending="UNSPECIFIED" column-ref="COL52" name="ID Тарифа" physicalName="ID_Rate" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB56" populated="true" UUID="fbea522a-1af4-48de-a926-dac47cc5433c" name="Диагнозы" objectType="TABLE" physicalName="Diagnosis" >
+   <remarks>таблица диагнозов</remarks>
+   <folder id="FOLTAB561" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL57" populated="true" UUID="aec2435a-8345-4208-84f7-f82e0b447d64" autoIncrement="false" autoIncrementSequenceName="Diagnosis_ID_Diagnosis_seq" defaultValue="" name="ID Диагноза" nullable="0" physicalName="ID_Diagnosis" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>идентифкатор диагноза</remarks>
+    </column>
+    <column id="COL58" populated="true" UUID="d6d1de74-fc84-43e1-8a70-f2eb2aa091b4" autoIncrement="false" autoIncrementSequenceName="Diagnosis_Description_Of_The_Diagnosis_seq" defaultValue="" name="Описание диагноза" nullable="0" physicalName="Description_Of_The_Diagnosis" precision="1024" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>текст диагноза</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB563" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB562" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB564" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX59" populated="true" UUID="ac0027e9-eb17-4549-8e4a-f4c23e1b3569" clustered="false" name="Diagnos_pk" physicalName="diagnos_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC60" populated="true" UUID="9912c5ad-1008-4a43-8409-5460ba768dcc" ascendingOrDescending="UNSPECIFIED" column-ref="COL57" name="ID Диагноза" physicalName="ID_Diagnosis" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB61" populated="true" UUID="5684892a-42cf-463e-b38c-36dce4b05b84" name="Сотрудники" objectType="TABLE" physicalName="Employees" >
+   <remarks>таблица сотрудников (состав бригады)</remarks>
+   <folder id="FOLTAB611" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL62" populated="true" UUID="7a1118c5-f3e8-40c9-9793-a7e5af1b6423" autoIncrement="false" autoIncrementSequenceName="Employees_ID_Employee_seq" defaultValue="" name="ID Сотрудника" nullable="0" physicalName="ID_Employee" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>идентификатор сотрудника</remarks>
+    </column>
+    <column id="COL63" populated="true" UUID="668d18fc-d05e-487d-b918-82ab2ba9974f" autoIncrement="false" autoIncrementSequenceName="Brigades_ID_Brigade_seq" defaultValue="" name="ID Бригады" nullable="0" physicalName="ID_Brigade" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>идентикатор бригады</remarks>
+    </column>
+    <column id="COL64" populated="true" UUID="2b8e4e6e-bc3e-4dd3-9d4e-fe1b43425ad2" autoIncrement="false" autoIncrementSequenceName="Employees_Name_seq" defaultValue="" name="Имя" nullable="0" physicalName="Name" precision="64" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>имя</remarks>
+    </column>
+    <column id="COL65" populated="true" UUID="ec3072b9-5d27-494d-ade2-cb9c513d0b29" autoIncrement="false" autoIncrementSequenceName="Employees_Surname_seq" defaultValue="" name="Фамилия" nullable="0" physicalName="Surname" precision="64" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Фамилия</remarks>
+    </column>
+    <column id="COL66" populated="true" UUID="caa3c392-ad22-4d5f-859a-3a4f394915e1" autoIncrement="false" autoIncrementSequenceName="Employees_Patrname_seq" defaultValue="" name="Отчество" nullable="0" physicalName="Patrname" precision="64" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Отчество</remarks>
+    </column>
+    <column id="COL67" populated="true" UUID="b60a99dc-688d-40b6-9627-0d3249308d6f" autoIncrement="false" autoIncrementSequenceName="Employees_Post_seq" defaultValue="" name="Должность" nullable="0" physicalName="Post" precision="64" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB613" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB612" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB614" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX68" populated="true" UUID="9e7116b5-a1b5-4c13-a47a-3ea9f11a7e71" clustered="false" name="Employee_pk" physicalName="employee_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC69" populated="true" UUID="76fa7df3-a392-4242-84c5-df0ae4e25573" ascendingOrDescending="UNSPECIFIED" column-ref="COL62" name="ID Сотрудника" physicalName="ID_Employee" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB70" populated="true" UUID="6d3777ac-732e-4375-905e-d7fac1309c8a" name="Страховые компании" objectType="TABLE" physicalName="Insurance_Companies" >
+   <remarks>таблица страховых компаний</remarks>
+   <folder id="FOLTAB701" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL71" populated="true" UUID="ea05d3c3-eff9-4270-b062-ebe1b742be45" autoIncrement="false" autoIncrementSequenceName="Insurance_Companies_ID_Ins_Company_seq" defaultValue="" name="ID Страховой компании" nullable="0" physicalName="ID_Ins_Company" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>первичный ключ таблицы Страховые компании</remarks>
+    </column>
+    <column id="COL72" populated="true" UUID="931b1f97-73d9-4823-8177-01e6f3788e54" autoIncrement="false" autoIncrementSequenceName="Insurance_Companies_Name_seq" defaultValue="" name="Наименование" nullable="0" physicalName="Name" precision="1024" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>наименование страховой компнаии</remarks>
+    </column>
+    <column id="COL73" populated="true" UUID="852b420b-f242-4379-87bc-b1a49cfe4014" autoIncrement="false" autoIncrementSequenceName="Insurance_Companies_ Contact_seq" defaultValue="" name="Контактные данные" nullable="0" physicalName=" Contact" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB703" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB702" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB704" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX74" populated="true" UUID="97a4eb83-380e-4a98-9ccd-104e8c29ed19" clustered="false" name="Insurance_Company_pk" physicalName="insurance_companies_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC75" populated="true" UUID="1b0d098e-d92f-4906-85fb-3c4acc79d690" ascendingOrDescending="UNSPECIFIED" column-ref="COL71" name="ID Страховой компании" physicalName="ID_Ins_Company" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB76" populated="true" UUID="c4730bc7-99e0-4436-a3fc-656a5c7d257e" name="Выданные медикаменты" objectType="TABLE" physicalName="List_Medications" >
+   <remarks>Таблица выданных медикаментов</remarks>
+   <folder id="FOLTAB761" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL77" populated="true" UUID="890fcf00-aedc-43a9-a1cd-0201f3a0171c" autoIncrement="false" autoIncrementSequenceName="List_Medications_ID_Call_seq" defaultValue="" name="ID Вызова" nullable="0" physicalName="ID_Call" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>первичный ключ; идентификатор вызова</remarks>
+    </column>
+    <column id="COL78" populated="true" UUID="f30701e3-bfa7-4a5f-8edd-b11f8dc025b8" autoIncrement="false" autoIncrementSequenceName="List_Medications_ID_Medications_seq" defaultValue="" name="ID Медикамента" nullable="0" physicalName="ID_Medications" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL79" populated="true" UUID="6e0d94f7-acb5-4476-a48e-45e4bfafe86b" autoIncrement="false" autoIncrementSequenceName="List_Medications_Quantity_seq" defaultValue="" name="Количество" nullable="0" physicalName="Quantity" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB763" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB762" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB764" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX80" populated="true" UUID="c5aef9a6-37a2-4911-896e-d5ac09522953" clustered="false" name="List_Medication_pk" physicalName="medication_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC81" populated="true" UUID="f25db962-7d39-4f0d-b1f8-38ba84986859" ascendingOrDescending="UNSPECIFIED" column-ref="COL77" name="ID Вызова" physicalName="ID_Call" />
+     <index-column id="IDC82" populated="true" UUID="4e3f2698-1519-4012-a23a-005532633bcf" ascendingOrDescending="UNSPECIFIED" column-ref="COL78" name="ID Медикамента" physicalName="ID_Medications" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB83" populated="true" UUID="d0a8aa4d-c7b5-49ea-a1d7-2051451f52fd" name="Сделанные анализы" objectType="TABLE" physicalName="List_Anallyzes" >
+   <remarks>таблица сделанных анализов</remarks>
+   <folder id="FOLTAB831" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL84" populated="true" UUID="b1f1e540-932a-4920-aa7b-8736d6c4cff8" autoIncrement="false" autoIncrementSequenceName="Call_Data_ID_Call_seq" defaultValue="" name="ID Вызова" nullable="0" physicalName="ID Вызова" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>первичный ключ; идентификатор вызова</remarks>
+    </column>
+    <column id="COL85" populated="true" UUID="29f3ff97-63eb-41d8-a298-6d0e5497efc1" autoIncrement="false" autoIncrementSequenceName="List_Anallyzes_ID_Analyzes_Made_seq" defaultValue="" name="ID Анализа" nullable="0" physicalName="ID Анализа" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL86" populated="true" UUID="9acd16ff-62dc-45a3-9772-ba3c77e3f62a" autoIncrement="false" autoIncrementSequenceName="List_Anallyzes_Volume_seq" defaultValue="" name="Объем" nullable="0" physicalName="Volume" precision="1024" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB833" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB832" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB834" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX87" populated="true" UUID="6e39de85-632d-40aa-8145-8d3a0784a43b" clustered="false" name="List_Analysis_pk" physicalName="analyses_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC88" populated="true" UUID="4ffdecf2-f15a-4c90-9088-580c32af762d" ascendingOrDescending="UNSPECIFIED" column-ref="COL84" name="ID Вызова" physicalName="ID Вызова" />
+     <index-column id="IDC89" populated="true" UUID="f96f01b6-0bfb-465f-a9d3-3130adf622a3" ascendingOrDescending="UNSPECIFIED" column-ref="COL85" name="ID Анализа" physicalName="ID Анализа" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB90" populated="true" UUID="fab6bf99-1c3f-4eaf-962b-2368f9317eb2" name="Полисы" objectType="TABLE" physicalName="Policies" >
+   <remarks></remarks>
+   <folder id="FOLTAB901" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL91" populated="true" UUID="b9468fa7-dfda-4af4-8626-031561ec9b40" autoIncrement="false" autoIncrementSequenceName="Policies_ID_Polis_seq" defaultValue="" name="ID Полиса" nullable="0" physicalName="ID_Polis" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL92" populated="true" UUID="40cc3d60-adb0-4151-a8e7-d52470ac5b32" autoIncrement="false" autoIncrementSequenceName="Policies_Start_date_seq" defaultValue="" name="Дата начала" nullable="1" physicalName="Start_date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL93" populated="true" UUID="48803a06-fd49-4dbe-9ebb-fd7f6d673947" autoIncrement="false" autoIncrementSequenceName="Policies_End_date_seq" defaultValue="" name="Дата окончания" nullable="1" physicalName="End_date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL94" populated="true" UUID="9d698249-e73f-4961-ba1d-f2f3aa9ce84a" autoIncrement="false" autoIncrementSequenceName="Insurance_Companies_ID_Ins_Company_seq" defaultValue="" name="ID Страховой компании" nullable="0" physicalName="ID_Ins_Company" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>первичный ключ таблицы Страховые компании</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB903" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB902" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB904" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX95" populated="true" UUID="b47c213e-061e-46a3-ae84-befa3a0b6f00" clustered="false" name="Policies_pk" physicalName="Policies_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC96" populated="true" UUID="c41e2a63-4393-44a2-b923-058b7fc874dc" ascendingOrDescending="UNSPECIFIED" column-ref="COL91" name="ID Полиса" physicalName="ID_Polis" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB97" populated="true" UUID="95530df1-7400-4251-828b-132732170ea4" name="Пациенты" objectType="TABLE" physicalName="Patients" >
+   <remarks></remarks>
+   <folder id="FOLTAB971" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL98" populated="true" UUID="3af1427d-2180-4246-b0c0-8ae6e11fd5a9" autoIncrement="false" autoIncrementSequenceName="Patients_ID_Patient_seq" defaultValue="" name="ID Пациента" nullable="0" physicalName="ID_Patient" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL99" populated="true" UUID="f0d6f44c-736e-492a-a954-625d4e86cb79" autoIncrement="false" autoIncrementSequenceName="Patients_Tel_Number_seq" defaultValue="" name="Номер телефона" nullable="0" physicalName="Tel_Number" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>номер телефона пациента</remarks>
+    </column>
+    <column id="COL100" populated="true" UUID="0007d92c-2307-42cf-a922-3342c3c4fc94" autoIncrement="false" autoIncrementSequenceName="Patients_Name_seq" defaultValue="" name="Имя" nullable="0" physicalName="Name" precision="64" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>имя пациента</remarks>
+    </column>
+    <column id="COL101" populated="true" UUID="04ddc075-3242-4876-980e-f25568147099" autoIncrement="false" autoIncrementSequenceName="Patients_Surname_seq" defaultValue="" name="Фамилия" nullable="0" physicalName="Surname" precision="64" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>фамилия пациента</remarks>
+    </column>
+    <column id="COL102" populated="true" UUID="39dc9ea2-6d63-4a4d-85c9-48a45bfdfc14" autoIncrement="false" autoIncrementSequenceName="Patients_Patrname_seq" defaultValue="" name="Отчество" nullable="0" physicalName="Patrname" precision="64" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>отчество</remarks>
+    </column>
+    <column id="COL103" populated="true" UUID="c218f562-c8c8-4ae0-b060-42efbe97066a" autoIncrement="false" autoIncrementSequenceName="Patients_Birthday_seq" defaultValue="" name="Дата рождения" nullable="1" physicalName="Birthday" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>дата рождения пациента</remarks>
+    </column>
+    <column id="COL104" populated="true" UUID="0cc15e0b-bbe8-4cba-ac7b-f50891e2ee81" autoIncrement="false" autoIncrementSequenceName="Patients_Passport_seq" defaultValue="" name="Паспортные данные" nullable="0" physicalName="Passport" precision="1024" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL105" populated="true" UUID="dbd72f39-5146-47fd-af6d-665566b6be0d" autoIncrement="false" autoIncrementSequenceName="Patients_Adress_seq" defaultValue="" name="Адрес" nullable="0" physicalName="Adress" precision="1024" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL106" populated="true" UUID="6d975199-8ba4-4db4-a47e-d3e5ba4b2afa" autoIncrement="false" autoIncrementSequenceName="Policies_ID_Polis_seq" defaultValue="" name="ID Полиса" nullable="0" physicalName="ID_Polis" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB973" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB972" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB974" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX107" populated="true" UUID="22a7ae33-de16-4dde-a8ac-c930b04b74fe" clustered="false" name="Patients_pk" physicalName="Patients_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC108" populated="true" UUID="84bacf02-b863-4b47-95e6-72478d8a4024" ascendingOrDescending="UNSPECIFIED" column-ref="COL98" name="ID Пациента" physicalName="ID_Patient" />
+    </index>
+    <index id="IDX109" populated="true" UUID="7b645852-fac9-45f1-8061-aa0ba833e00e" clustered="false" name="Пациенты_idx" physicalName="Пациенты_idx" primaryKeyIndex="false" unique="true" >
+     <index-column id="IDC110" populated="true" UUID="707f23cf-93bd-48f9-b263-937ae57f6712" ascendingOrDescending="ASCENDING" column-ref="COL98" name="ID Пациента" physicalName="ID_Patient" />
+    </index>
+    <index id="IDX111" populated="true" UUID="f7e35afb-cc86-4250-8c76-ef6e657d48bf" clustered="false" name="Пациенты_idx1" physicalName="Пациенты_idx1" primaryKeyIndex="false" unique="true" >
+     <index-column id="IDC112" populated="true" UUID="b039838e-c82b-4aca-b39a-2599cff81e44" ascendingOrDescending="ASCENDING" column-ref="COL99" name="Номер телефона" physicalName="Tel_Number" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL113" populated="true" UUID="bad8bd53-0c0f-4968-858a-a2956c72e5d4" deferrability="7" deleteRule="3" fk-table-ref="TAB20" fkCardinality="3" identifying="true" name="Calls_Call_Data_fk" physicalName="Calls_Call_Data_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP114" populated="true" UUID="0ad1ab64-5996-44b6-be6a-983b1c034105" fk-column-ref="COL21" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL115" populated="true" UUID="a408cb34-3f19-4b05-a0b1-2978dc6706b5" deferrability="7" deleteRule="3" fk-table-ref="TAB20" fkCardinality="7" identifying="false" name="Brigades_Call_Data_fk" physicalName="Brigades_Call_Data_fk" pk-table-ref="TAB9" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP116" populated="true" UUID="cc7f6f13-63ba-4f3f-a137-78db9e9d3b7a" fk-column-ref="COL36" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL10" />
+   </relationship>
+   <relationship id="REL117" populated="true" UUID="220c6a29-9867-4776-b431-4ce3330525f6" deferrability="7" deleteRule="3" fk-table-ref="TAB61" fkCardinality="7" identifying="false" name="Brigades_Employees_fk" physicalName="Brigades_Employees_fk" pk-table-ref="TAB9" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP118" populated="true" UUID="42ae7644-fc7a-4417-9c60-9cbbb5affd41" fk-column-ref="COL63" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL10" />
+   </relationship>
+   <relationship id="REL119" populated="true" UUID="192734cc-0168-427d-b219-0071bc4a5eef" deferrability="7" deleteRule="3" fk-table-ref="TAB83" fkCardinality="7" identifying="true" name="Call_Data_List_Anallyzes_fk" physicalName="Call_Data_List_Anallyzes_fk" pk-table-ref="TAB20" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP120" populated="true" UUID="04acd998-4fc9-497a-8002-f3dec23b5ab9" fk-column-ref="COL84" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL21" />
+   </relationship>
+   <relationship id="REL121" populated="true" UUID="b5c8a83c-b814-4973-a212-652a548bee5a" deferrability="7" deleteRule="3" fk-table-ref="TAB76" fkCardinality="7" identifying="true" name="Call_Data_List_Medications_fk" physicalName="Call_Data_List_Medications_fk" pk-table-ref="TAB20" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP122" populated="true" UUID="c208c0c6-6f94-4a49-b62e-f18796c82454" fk-column-ref="COL77" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL21" />
+   </relationship>
+   <relationship id="REL123" populated="true" UUID="73b91567-685d-4106-b391-670a796496c5" deferrability="7" deleteRule="3" fk-table-ref="TAB83" fkCardinality="7" identifying="true" name="Analyzes_List_Anallyzes_fk" physicalName="Analyzes_List_Anallyzes_fk" pk-table-ref="TAB39" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP124" populated="true" UUID="a3110e6d-29b0-4031-9813-0966df9663d9" fk-column-ref="COL85" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL40" />
+   </relationship>
+   <relationship id="REL125" populated="true" UUID="483380e0-6e42-47af-a10d-630cf766bf8f" deferrability="7" deleteRule="3" fk-table-ref="TAB76" fkCardinality="7" identifying="true" name="Medications_List_Medications_fk" physicalName="Medications_List_Medications_fk" pk-table-ref="TAB45" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP126" populated="true" UUID="56f7021c-2ced-4b78-bc9c-37a14ab84091" fk-column-ref="COL78" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL46" />
+   </relationship>
+   <relationship id="REL127" populated="true" UUID="bfb942dd-5dc4-4440-8987-a7734f41affa" deferrability="7" deleteRule="0" fk-table-ref="TAB20" fkCardinality="3" identifying="false" name="Rates_Call_Data_fk" physicalName="Rates_Call_Data_fk" pk-table-ref="TAB51" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP128" populated="true" UUID="eccb44c1-904e-4979-8494-0ad1d1980790" fk-column-ref="COL35" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL52" />
+   </relationship>
+   <relationship id="REL129" populated="true" UUID="6e67f7dc-5394-4604-9bda-0ad7974aed79" deferrability="7" deleteRule="0" fk-table-ref="TAB20" fkCardinality="6" identifying="false" name="Diagnosis_Call_Data_fk" physicalName="Diagnosis_Call_Data_fk" pk-table-ref="TAB56" pkCardinality="6" updateRule="0" >
+    <column-mapping id="CMP130" populated="true" UUID="302bf7f3-6a99-4c42-88dc-5595e78c41ae" fk-column-ref="COL32" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL57" />
+   </relationship>
+   <relationship id="REL131" populated="true" UUID="2049e7c0-e963-472e-92d2-920ac4190766" deferrability="7" deleteRule="3" fk-table-ref="TAB90" fkCardinality="6" identifying="false" name="Insurance_Companies_Policies_fk" physicalName="Insurance_Companies_Policies_fk" pk-table-ref="TAB70" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP132" populated="true" UUID="6798182a-79eb-4266-bd5a-52c01d670453" fk-column-ref="COL94" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL71" />
+   </relationship>
+   <relationship id="REL133" populated="true" UUID="f63eb4e3-d9f8-452c-879a-e5d448414472" deferrability="7" deleteRule="3" fk-table-ref="TAB97" fkCardinality="3" identifying="false" name="Policies_Patients_fk" physicalName="Policies_Patients_fk" pk-table-ref="TAB90" pkCardinality="6" updateRule="3" >
+    <column-mapping id="CMP134" populated="true" UUID="559334e1-3568-4431-afa4-f2f6570311d8" fk-column-ref="COL106" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL91" />
+   </relationship>
+   <relationship id="REL135" populated="true" UUID="e2ef6c8c-bd08-42de-80f4-0d590a1c7f2e" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="3" identifying="false" name="Patients_Calls_fk" physicalName="Patients_Calls_fk" pk-table-ref="TAB97" pkCardinality="3" updateRule="3" >
+    <column-mapping id="CMP136" populated="true" UUID="2900404e-14fd-4fc0-a0fb-794cba77fb3d" fk-column-ref="COL6" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL98" />
+   </relationship>
+   <relationship id="REL137" populated="true" UUID="29fbb9f7-fb4d-4c24-b3f0-04721f0ad07a" deferrability="7" deleteRule="3" fk-table-ref="TAB14" fkCardinality="3" identifying="true" name="Patients_Black_List_fk" physicalName="Patients_Black_List_fk" pk-table-ref="TAB97" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP138" populated="true" UUID="8c4faea9-21fa-4f4c-b00c-1793297f79e4" fk-column-ref="COL15" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL98" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="0.8408964152537118" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="29" y="25" bgColor="0xb9bbf6" fgColor="0x0000cc" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB9" x="482" y="251" bgColor="0xe8cfdb" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB14" x="825" y="20" bgColor="0xe4e4b8" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB20" x="30" y="173" bgColor="0xc8b7ea" fgColor="0x0000cc" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB39" x="405" y="630" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB45" x="635" y="531" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB51" x="496" y="440" bgColor="0xe6d794" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB56" x="429" y="344" bgColor="0xfbdabb" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB61" x="778" y="353" bgColor="0xdfedce" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB70" x="907" y="248" bgColor="0xeec994" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB76" x="264" y="533" bgColor="0xeec994" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB83" x="26" y="608" bgColor="0xfbdabb" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB90" x="861" y="114" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB97" x="432" y="20" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL127" pkConnection="0.061946902654867256" fkConnection="0.895397489539749" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL129" pkConnection="0.40350877192982454" fkConnection="0.7490636704119851" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL113" pkConnection="0.5357142857142857" fkConnection="0.44256756756756754" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL119" pkConnection="0.4797297297297297" fkConnection="0.5021097046413502" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL123" pkConnection="0.15492957746478872" fkConnection="0.8169014084507042" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL115" pkConnection="0.5211267605633803" fkConnection="0.3595505617977528" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL125" pkConnection="0.14084507042253522" fkConnection="0.8588235294117647" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL121" pkConnection="0.7794561933534743" fkConnection="0.4198473282442748" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL117" pkConnection="0.7955271565495208" fkConnection="0.0" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="36"/>
+  <table-link relationship-ref="REL135" pkConnection="0.44881889763779526" fkConnection="0.5555555555555556" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL137" pkConnection="0.425531914893617" fkConnection="0.647887323943662" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL133" pkConnection="0.17543859649122806" fkConnection="0.9419354838709677" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL131" pkConnection="0.49473684210526314" fkConnection="0.5017543859649123" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
